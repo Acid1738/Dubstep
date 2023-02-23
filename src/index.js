@@ -17,7 +17,8 @@ const stem = ReactDOM.createRoot(document.getElementById('stem'));
 const char = ReactDOM.createRoot(document.getElementById("Characters"));
 const seao = ReactDOM.createRoot(document.getElementById("Season"));
 
-
+//dsffgnhmnbvfgm b
+//tdhjckv
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<>
