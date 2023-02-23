@@ -1,0 +1,15 @@
+.people {
+    display: inline-block;
+   padding: 0.5%;
+   margin: 1%;
+   background-color: #181818;
+   border-radius: 30px;
+   text-align: center;
+   width: fit-content;
+   padding-top: 20px;
+}
+
+.potrait {
+    width: 90%;
+    border-radius: 20px;
+}
