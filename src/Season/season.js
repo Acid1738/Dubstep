@@ -4,6 +4,7 @@ import Back from "../Information/Info";
 import { InfoBack } from "../Information/InfoBack";
 import "./character.css";
 import "./season.css";
+import Fix from "../Information/Refresh/Refresh";
 
 //Adds a new season in an anime
 function AddSeason() {
@@ -95,6 +96,9 @@ function SeasonFill() {
 
   //how many characters to print
   let Characters = JSON.parse(localStorage.getItem("Characters"));
+    if (Characters == "" ) {
+     Fix()
+  }
   let Char = Characters[position];
   let lenth = Char.length;
 
