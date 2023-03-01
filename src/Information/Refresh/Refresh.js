@@ -1,5 +1,4 @@
-
-
+//function that calls the characters for that season beacuse it didnt get called the first time (maybe)
 function Fix() {
   let position = document.getElementById("identify").innerText;
   let Information = JSON.parse(localStorage.getItem("Information"));
@@ -13,7 +12,6 @@ function Fix() {
 
   function SaveChar(CharacterData) {
     let CharData = CharacterData;
-    
 
     let FilteredCharData = [];
 
@@ -23,12 +21,11 @@ function Fix() {
         info.name = CharData.data[i].character.name;
         info.image = CharData.data[i].character.images.jpg.image_url;
         FilteredCharData.push(info);
-        
       }
     }
     console.log(FilteredCharData);
     let Characters = JSON.parse(localStorage.getItem("Characters"));
-    Characters.splice(position,0,FilteredCharData);
+    Characters.splice(position, 0, FilteredCharData);
 
     localStorage.setItem("Characters", JSON.stringify(Characters));
   }

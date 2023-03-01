@@ -5,6 +5,7 @@ import { InfoBack } from "../Information/InfoBack";
 import "./character.css";
 import "./season.css";
 
+//Adds a new season in an anime
 function AddSeason() {
   let position = document.getElementById("identify").innerText;
   let Information = JSON.parse(localStorage.getItem("Information"));
@@ -16,6 +17,7 @@ function AddSeason() {
   SeasonFill();
 }
 
+//Removes the last season in an anime
 function RemoveSeason() {
   let position = document.getElementById("identify").innerText;
   let Information = JSON.parse(localStorage.getItem("Information"));
@@ -27,6 +29,7 @@ function RemoveSeason() {
   SeasonFill();
 }
 
+//the html for the characters
 function Leech() {
   return (
     <>
@@ -38,8 +41,9 @@ function Leech() {
   );
 }
 
+//creates a the first season when you add an anime
 function SeasonInfo() {
-  //This basicall fins the array that has data for the season
+  //This basicall finds the array that has data for the season
   let position = document.getElementById("identify").innerText;
   let Information = JSON.parse(localStorage.getItem("Information"));
   let ID = Information[position].info.id;
@@ -61,38 +65,40 @@ function SeasonInfo() {
   localStorage.setItem(lastest_ep, last_ep);
 }
 
+//html for the season elements
 function Season() {
   return (
     <>
       <div className="season">
         <div className="season-info">
-        <h3>
-          Season <span className="seasonnum"></span>
-        </h3>
-        <span className="Inner"></span> &nbsp;&nbsp;
-        <span className="currep"> </span>/<span className="numep"></span>
-      </div>
+          <h3>
+            Season <span className="seasonnum"></span>
+          </h3>
+          <span className="Inner"></span> &nbsp;&nbsp;
+          <span className="currep"> </span>/<span className="numep"></span>
+        </div>
       </div>
     </>
   );
 }
 
 function SeasonFill() {
-  //This basicall fins the array that has data for the season
+  //This finds the id  for the anime
   let position = document.getElementById("identify").innerText;
-
   let Information = JSON.parse(localStorage.getItem("Information"));
-
   let ID = Information[position].info.id;
 
+  //how many seasons to print
   let StorageSeason = "Season" + ID;
   let season = JSON.parse(localStorage.getItem(StorageSeason));
   let SeasonLentth = season.length;
 
+  //how many characters to print
   let Characters = JSON.parse(localStorage.getItem("Characters"));
   let Char = Characters[position];
   let lenth = Char.length;
 
+  //render the stuff
   stem.render(
     <>
       <Back />
@@ -101,7 +107,13 @@ function SeasonFill() {
     </>
   );
 
-  setTimeout(() => { //ADD INFO FOR EACH seasson
+  let SeaNum = document.getElementsByClassName("seasonnum");
+  let CENum = document.getElementsByClassName("currep");
+  let LENum = document.getElementsByClassName("numep");
+  let blend = document.getElementsByClassName("Inner");
+
+  setTimeout(() => {
+    //ADD INFO FOR EACH seasson
     for (let j = 0; j <= SeasonLentth; j++) {
       SeaNum[j].innerText = j + 1;
       let l = j + 1;
@@ -109,24 +121,23 @@ function SeasonFill() {
       //current episode
       let current = "ID" + ID + "S" + l + "CE";
       CENum[j].innerText = localStorage.getItem(current);
-  
+
       //last watched episode
       let latest = "ID" + ID + "S" + l + "LE";
       LENum[j].innerText = localStorage.getItem(latest);
-  
+
+      // indicate how many episodes you have you watched
       let tree = localStorage.getItem(current);
       for (let z = 0; z < tree; z++) {
         blend[j].innerText += "🟩";
       }
-    }
-    
-  }, 1000);
-  let SeaNum = document.getElementsByClassName("seasonnum");
-  let CENum = document.getElementsByClassName("currep");
-  let LENum = document.getElementsByClassName("numep");
-  let blend = document.getElementsByClassName("Inner");
 
-  
+      let screw = localStorage.getItem(latest) - localStorage.getItem(current);
+      for (let a  = 0 ; a < screw ; a++) {
+        blend[j].innerText += "🟥";
+      }
+    }
+  }, 1000);
 
   setTimeout(InfoBack, 800);
   setTimeout(CharactersBack, 800);

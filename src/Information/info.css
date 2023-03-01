@@ -1,3 +1,6 @@
+
+@media only screen and (min-width: 600px) {
+
 #top {
     display: inline-flex;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -111,5 +114,131 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+}
 
+/*/////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 600px) {
+  #top {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #181818;
+    margin: 2%;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+#plot {
+    padding-left: 2%;
+    font-size: larger;
+}
+
+#info {
+    background-color: #181818;
+    border-radius: 30px;
+    padding-left:5% ;
+    padding-top: 3% ;
+    margin: 1%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  #SeasonControl {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    color: white;
+    margin-left: 60px;
+    width: max-content;
+    border-radius: 10px;
+    background: #181818;
+    
+  }
+
+  #three {
+    margin-top: 1%;
+    background-color: #181818;
+    color: white;
+  }
+
+  #Remove {
+    float: right;
+    background-color: #181818;
+    color: white;
+  }
+   
+   
+  #close {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #181818;
+    color: white;
+  }
+   
+
+  #lastep {
+    background-color: #212121;
+    max-width: 190px;
+     text-align: center; 
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+   
+  }
+  
+  .lastep:focus {
+    color: rgb(0, 255, 255);
+    background-color: #212121;
+    outline-color: rgb(0, 255, 255);
+    box-shadow: -3px -3px 15px rgb(0, 255, 255);
+    transition: .1s;
+    transition-property: box-shadow;
+  }
+
+  #currep {
+    background-color: #212121;
+    max-width: 190px;
+     text-align: center; 
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+  
+  }
+  
+  .currep:focus {
+    color: rgb(0, 255, 255);
+    background-color: #212121;
+    outline-color: rgb(0, 255, 255);
+    box-shadow: -3px -3px 15px rgb(0, 255, 255);
+    transition: .1s;
+    transition-property: box-shadow;
+  }
+  
+  button {
+    background-color: #181818;
+    color: white;
+    box-shadow: -3px -3px 15px #212121;
+  }
+
+  #delete {
+    float: right;
+    margin-right: 2%;
+  } 
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#poster {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
 

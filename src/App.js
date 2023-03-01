@@ -4,7 +4,7 @@ import AddNew from "./Fetch/fetch";
 function App() {
   return (
     <>
-      <div>
+      <div >
         <input id="input" type="number" /> &nbsp;&nbsp;
         <button id="SaveAnime" onClick={AddNew}>
           Save
@@ -15,5 +15,3 @@ function App() {
 }
 
 export default App;
-
-//tdfcirdfcvikrfvjk
