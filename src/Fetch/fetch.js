@@ -10,7 +10,7 @@ function WeGood() {
 
   setTimeout(() => {
     if (status === 200) {
-      console.log("instagram");
+
       AddNew();
     }
   }, 500);
