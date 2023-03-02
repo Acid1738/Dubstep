@@ -15,6 +15,10 @@ function WeGood() {
 }
 
 function AddNew() {
+  let ID = document.getElementById("input").value;
+  let link = "https://api.jikan.moe/v4/anime/" + ID;
+
+  
   fetch(link)
     .then((res) => res.json())
     .then((data) => Save(data));
