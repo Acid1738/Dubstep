@@ -102,7 +102,6 @@ function SeasonFill() {
   let Char = Characters[position];
   let lenth = Char.length;
 
-  console.log("we camee");
   //render the stuff
   inform.render(
       <Back />
@@ -117,7 +116,6 @@ function SeasonFill() {
   </>)
   ;
 
-  console.log("we ddi nothing");
   let SeaNum = document.getElementsByClassName("seasonnum");
   let CENum = document.getElementsByClassName("currep");
   let LENum = document.getElementsByClassName("numep");

@@ -48,7 +48,6 @@ let TITLE;
 document.getElementById("searchInput").addEventListener("keyup", () => {
   title = document.getElementById("searchInput").value;
   TITLE = title.toUpperCase();
-  console.log(TITLE);
   Search();
 });
 

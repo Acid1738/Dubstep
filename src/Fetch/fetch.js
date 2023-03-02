@@ -8,17 +8,18 @@ function WeGood() {
     status = res.status;
   });
 
-  setTimeout(() => {}, 500);
-  if (status === 200) {
-    AddNew();
-  }
+  setTimeout(() => {
+    if (status === 200) {
+      console.log("instagram");
+      AddNew();
+    }
+  }, 500);
 }
 
 function AddNew() {
   let ID = document.getElementById("input").value;
   let link = "https://api.jikan.moe/v4/anime/" + ID;
 
-  
   fetch(link)
     .then((res) => res.json())
     .then((data) => Save(data));
