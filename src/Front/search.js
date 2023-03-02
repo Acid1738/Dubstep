@@ -11,7 +11,7 @@ function Search() {
   for (let i = 0; i < naam.length; i++) {
     NAAM = naam[i].innerText.toUpperCase();
 
-    if (NAAM.indexOf(TITLE) == -1) {
+    if (NAAM.indexOf(TITLE) === -1) {
       app[i].style.display = "none";
 
     } else {
