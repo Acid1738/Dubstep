@@ -1,9 +1,10 @@
 import { CharactersBack } from "../Characters/Character";
-import { stem } from "..";
-import Back from "../Information/Info";
+import { char, inform, seao } from "..";
+import { Back } from "../Information/Info";
 import { InfoBack } from "../Information/InfoBack";
 import "./character.css";
 import "./season.css";
+import Fix from "../Information/Refresh/Refresh";
 
 //Adds a new season in an anime
 function AddSeason() {
@@ -34,7 +35,7 @@ function Leech() {
   return (
     <>
       <div className="people">
-        <img className="potrait" />
+        <img className="potrait" alt="potrait of character" />
         <p className="name"></p>
       </div>
     </>
@@ -95,18 +96,28 @@ function SeasonFill() {
 
   //how many characters to print
   let Characters = JSON.parse(localStorage.getItem("Characters"));
+  if (Characters === "" ) {
+     Fix()
+  }
   let Char = Characters[position];
   let lenth = Char.length;
 
+  console.log("we camee");
   //render the stuff
-  stem.render(
-    <>
+  inform.render(
       <Back />
-      {Array(lenth).fill(<Leech />)}
-      {Array(SeasonLentth).fill(<Season />)}
-    </>
   );
 
+  char.render(<>
+      {Array(lenth).fill(<Leech />)}
+  </>);
+
+  seao.render(<>
+      {Array(SeasonLentth).fill(<Season />)}
+  </>)
+  ;
+
+  console.log("we ddi nothing");
   let SeaNum = document.getElementsByClassName("seasonnum");
   let CENum = document.getElementsByClassName("currep");
   let LENum = document.getElementsByClassName("numep");

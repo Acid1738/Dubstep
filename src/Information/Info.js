@@ -20,15 +20,14 @@ function Back() {
       <button onClick={GoBack}>Back</button>
       <button id="delete" onClick={Delete}>Delete</button>
       <section id="top">
-        <img id="poster" />
+        <img id="poster" alt="poster for anime" />
         <p id="plot"></p>
       </section>
       <section id="info">
         Airing: <span id="status"></span> <br></br>
         Studio: <span id="studio"></span> <br></br>
         Score: <span id="score"></span> <br></br>
-        Length: <span id="duration"></span> <br></br>
-        <button id="three" onClick={ShowControl}>⋮</button>
+        Length: <span id="duration"></span> <br></br> <br/>
         <button onClick={Fix}>fix Characters</button>
       </section>
       
@@ -50,4 +49,4 @@ function Back() {
   );
 }
 
-export default Back;
+export {Back , ShowControl};

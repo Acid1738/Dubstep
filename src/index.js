@@ -4,25 +4,26 @@ import "./index.css";
 import Card from "./Front/card";
 import CardBack from "./Front/CardBack";
 import Click from "./Front/Click";
-import AddNew from "./Fetch/fetch";
+import WeGood from "./Fetch/fetch";
 import Search from "./Front/search";
+import { ShowControl } from "./Information/Info";
 
 //check weather user is visitng for the first time
 //if yes create the storage values
 let check = JSON.parse(localStorage.getItem("Spine"));
 if (check === null) {
-  console.log("eyeshot");
+
   localStorage.setItem("Spine", "[]");
   localStorage.setItem("Information", "[]");
   localStorage.setItem("Characters", "[]");
 }
 
 //add a new anime
-document.getElementById("SaveAnime").addEventListener("click", AddNew);
+document.getElementById("SaveAnime").addEventListener("click", WeGood);
 let bro = document.getElementById("input");
 bro.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
-    AddNew();
+    WeGood();
   }
 });
 
@@ -34,6 +35,7 @@ setTimeout(CardBack, 600);
 const stem = ReactDOM.createRoot(document.getElementById("stem"));
 const char = ReactDOM.createRoot(document.getElementById("Characters"));
 const seao = ReactDOM.createRoot(document.getElementById("Season"));
+const inform = ReactDOM.createRoot(document.getElementById("Inform"));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<>{Array(SpineLength).fill(<Card />)}</>);
@@ -50,4 +52,22 @@ document.getElementById("searchInput").addEventListener("keyup", () => {
   Search();
 });
 
-export { stem, char, seao, TITLE };
+
+///three dot button
+document.getElementById("three").addEventListener("click" , ShowControl);
+
+let count = 0;
+//three line buttom
+document.getElementById("menu").addEventListener("click" , () => {
+ count += 1;
+ if (count === 1) {
+  document.getElementById("ytea").style.display = "block";
+ }
+
+ if (count === 2 ) {
+  document.getElementById("ytea").style.display = "none";
+  count = 0 ;
+ }
+
+});
+export { stem, char, seao, TITLE, inform };

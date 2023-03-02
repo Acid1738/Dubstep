@@ -1,11 +1,20 @@
-function AddNew() {
+function WeGood() {
   let ID = document.getElementById("input").value;
   let link = "https://api.jikan.moe/v4/anime/" + ID;
 
-  let Spine = JSON.parse(localStorage.getItem("Spine"));
-  Spine.unshift(ID);
-  localStorage.setItem("Spine", JSON.stringify(Spine));
+  let status;
 
+  fetch(link).then((res) => {
+    status = res.status;
+  });
+
+  setTimeout(() => {}, 500);
+  if (status === 200) {
+    AddNew();
+  }
+}
+
+function AddNew() {
   fetch(link)
     .then((res) => res.json())
     .then((data) => Save(data));
@@ -13,6 +22,7 @@ function AddNew() {
   function Save(data) {
     //filter relavent info because respnse is to big
     //local storage has its limits
+
     let UnfilteredInfo = data;
     let info = {};
     let FilteredInfo = { info };
@@ -30,8 +40,13 @@ function AddNew() {
     localStorage.setItem("Information", JSON.stringify(Information));
   }
 
+  let Spine = JSON.parse(localStorage.getItem("Spine"));
+  Spine.unshift(ID);
+  localStorage.setItem("Spine", JSON.stringify(Spine));
+
   let CharLink = link + "/characters";
 
+  //Character
   fetch(CharLink)
     .then((res) => res.json())
     .then((CharacterData) => SaveChar(CharacterData));
@@ -65,4 +80,4 @@ function AddNew() {
   }, 1100);
 }
 
-export default AddNew;
+export default WeGood;

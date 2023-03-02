@@ -28,8 +28,15 @@ function Delete() {
 }
 
 function GoBack() {
+  let xheese = window.screen.width;
   document.getElementById("stem").style.display = "none";
-  document.getElementById("root").style.display = "flex ";
+  document.getElementById("three").style.display = "none";
+  if (xheese < 600 ) {
+    document.getElementById("root").style.display = "block";
+  } else {
+    document.getElementById("root").style.display = "flex";
+  }
+  
 }
 
 //update information on last watched episode

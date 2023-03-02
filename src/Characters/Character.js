@@ -2,7 +2,7 @@ function Characters() {
   return (
     <>
       <div className="people">
-        <img className="potrait" />
+        <img className="potrait" alt="character potrait"/>
         <p className="name"></p>
       </div>
     </>
@@ -23,7 +23,6 @@ function CharactersBack() {
 
     if (chara[lenth] !== null) {
       document.getElementById("stem").style.display = "block";
-      document.getElementById("dot-wave").style.display = "none";
     }
   }
 }

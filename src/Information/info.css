@@ -141,6 +141,7 @@ input::-webkit-inner-spin-button {
     border-radius: 30px;
     padding-left:5% ;
     padding-top: 3% ;
+    padding-bottom: 3%;
     margin: 1%;
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
@@ -158,6 +159,7 @@ input::-webkit-inner-spin-button {
   }
 
   #three {
+    display: none;
     margin-top: 1%;
     background-color: #181818;
     color: white;
