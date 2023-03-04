@@ -248,6 +248,7 @@
     border-radius: 200px;
     border: 1px solid white;
     width: 100px;
+    text-align: center;
   }
 
   #clout {
@@ -266,5 +267,6 @@
     width: 100px;
     border-radius: 50px;
     padding: 0px 5px 0px 5px;
+    text-align: center;
   }
 }

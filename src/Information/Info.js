@@ -4,7 +4,7 @@ import { GoBack } from "./InfoBack";
 import { LastEP } from "./InfoBack";
 import { TotalEP } from "./InfoBack";
 import "./info.css";
-import Fix from "./Refresh/Refresh";
+
 
 function ShowControl() {
   document.getElementById("SeasonControl").style.display = "block";
@@ -28,7 +28,6 @@ function Back() {
         Studio: <span id="studio"></span> <br></br>
         Score: <span id="score"></span> <br></br>
         Length: <span id="duration"></span> <br></br> <br/>
-        <button onClick={Fix}>fix Characters</button>
       </section>
       
       <div id="SeasonControl">

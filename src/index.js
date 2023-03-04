@@ -7,6 +7,7 @@ import Click from "./Front/Click";
 import WeGood from "./Fetch/fetch";
 import Search from "./Front/search";
 import { ShowControl } from "./Information/Info";
+import Fix from "./Information/Refresh/Refresh";
 
 //check weather user is visitng for the first time
 //if yes create the storage values
@@ -69,4 +70,7 @@ document.getElementById("menu").addEventListener("click" , () => {
  }
 
 });
+
+//fixx character not being fetched
+document.getElementById("Fix").addEventListener("click", Fix);
 export { stem, char, seao, TITLE, inform };

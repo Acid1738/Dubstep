@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="manifest" href="manifest.json">
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <div id="identify" hidden>1</div>
-    <div id="progress-loader">
-      <div id="progress"></div>
-    </div>
-
+  
+    
     <title>Anime List</title>
   </head>
 
-  <body>
+  <body >
+
+  </body><div id="identify" hidden>1</div>
+  <div id="progress-loader">
+    <div id="progress"></div>
+  </div>
+
     <div id="loader"></div>
    <button id="menu">≡</button>
     <div id="clout">
@@ -43,6 +46,7 @@
     <!-- Html for the react to render elements -->
     <div id="stem">
       <div id="Inform"></div>
+      <button id="Fix">FIX</button>
       <div id="Characters"></div>
       <button id="three">⋮</button>
       <div id="Season"></div>
@@ -50,5 +54,6 @@
 
     <div id="root"></div>
 
+    <script src="/src/Service/serv.js"></script>
   </body>
 </html>

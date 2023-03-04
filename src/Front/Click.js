@@ -12,6 +12,7 @@ function Click() {
       document.getElementById("three").style.display = "block";
       document.getElementById("root").style.display = "none";
       document.getElementById("identify").innerText = i;
+      document.getElementById("stem").style.display = "block";
 
       SeasonFill();
     };

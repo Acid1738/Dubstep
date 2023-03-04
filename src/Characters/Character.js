@@ -20,10 +20,6 @@ function CharactersBack() {
   for (let i = 0; i < lenth; i++) {
     image[i].src = Char[i].image;
     chara[i].innerText = Char[i].name;
-
-    if (chara[lenth] !== null) {
-      document.getElementById("stem").style.display = "block";
-    }
   }
 }
 
