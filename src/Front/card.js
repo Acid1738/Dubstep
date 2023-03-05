@@ -5,7 +5,7 @@ function Card() {
     return (
         <div className="App">
           <div className="App_content">
-          <img className="poster" src="" alt="Poster" />
+          <img className="poster" src="" alt="Poster"  loading="lazy"/>
           <p className="title"></p>
           </div>
         </div>
