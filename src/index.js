@@ -9,6 +9,7 @@ import Search from "./Front/search";
 import { ShowControl } from "./Information/Info";
 import Fix from "./Information/Refresh/Refresh";
 
+
 //check weather user is visitng for the first time
 //if yes create the storage values
 let check = JSON.parse(localStorage.getItem("Spine"));
