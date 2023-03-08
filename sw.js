@@ -1,7 +1,7 @@
 const staticCacheName = "site-static";
 const assets = [
   "/",
-  "index.html",
+  "/index.html",
 ];
 
 self.addEventListener("install", (evt) => {
