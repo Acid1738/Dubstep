@@ -9,8 +9,8 @@ const assets = [
   "/static/js/main.6aa69e32.js",
   "/static/js/main.6aa69e32.js.LICENSE.txt",
   "/static/js/main.6aa69e32.js.map",
-  "/Icon/512.png",
-  "/Icon/192.png",
+  "/512.png",
+  "/192.png",
 ];
 
 self.addEventListener("install", (evt) => {
