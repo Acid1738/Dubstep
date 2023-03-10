@@ -4,49 +4,49 @@
   "icons": [
 
     {
-      "src": "/public/Icon/72.svg",
+      "src": "https://acid1738.github.io/Dubstep/Icon/72.svg",
       "sizes": "72x72",
       "type": "image/png"
     },
 
     {
-      "src": "/public/Icon/96.svg",
+      "src": "https://acid1738.github.io/Dubstep/Icon/96.svg",
       "sizes": "96x96",
       "type": "image/png"
     },
 
     {
-      "src": "/public/Icon/128.svg",
+      "src": "https://acid1738.github.io/Dubstep/Icon/128.svg",
       "sizes": "128x128",
       "type": "image/png"
     },
 
     {
-      "src": "/public/Icon/144.svg",
+      "src": "https://acid1738.github.io/Dubstep/Icon/144.svg",
       "sizes": "144x144",
       "type": "image/png"
     },
 
     {
-      "src": "/public/Icon/152.svg",
+      "src": "https://acid1738.github.io/Dubstep/Icon/152.svg",
       "sizes": "152x152",
       "type": "image/png"
     },
 
     {
-      "src": "/public/Icon/192.svg",
+      "src": "https://acid1738.github.io/Dubstepc/Icon/192.svg",
       "sizes": "192x192",
       "type": "image/png"
     },
 
     {
-      "src": "/public/Icon/384.svg",
+      "src": "https://acid1738.github.io/Dubstep/Icon/384.svg",
       "sizes": "384x384",
       "type": "image/png"
     },
 
     {
-      "src": "/public/Icon/512.svg",
+      "src": "https://acid1738.github.io/Dubstep/Icon/512.svg",
       "sizes": "512x512",
       "type": "image/png"
     }
