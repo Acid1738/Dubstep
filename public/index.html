@@ -13,15 +13,21 @@
   </head>
 
   <body>
-    <button id="stat" style="float: right;">STATISTICA</button> <br> 
+
+    <div id="topup">
+      <button id="menu">⮀</button>
+      <button id="stat" >S</button>
+    </div>
+   
 
     <div id="identify" hidden>1</div>
+    
     <div id="progress-loader">
       <div id="progress"></div>
     </div>
 
     <div id="loader"></div>
-    <button id="menu">≡</button>
+    
     <div id="clout">
       <input id="searchInput" type="text" placeholder="search..." />
 
@@ -48,7 +54,7 @@
     <!-- Html for the react to render elements -->
     <div id="stem">
       <div id="Inform"></div>
-      <button id="Fix">FIX</button>
+      <button id="Fix" style="display: none;">FIX</button>
       <div id="Characters"></div>
       <button id="three">⋮</button>
       <div id="Season"></div>

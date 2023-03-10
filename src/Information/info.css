@@ -223,6 +223,7 @@ input::-webkit-inner-spin-button {
     background-color: #181818;
     color: white;
     box-shadow: -3px -3px 15px #212121;
+    border: 2px solid purple;
   }
 
   #delete {

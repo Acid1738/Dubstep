@@ -17,7 +17,7 @@ function HideControl() {
 function Back() {
   return (
     <>
-      <button onClick={GoBack}>Back</button>
+      <button onClick={GoBack}>⮄</button>
       <button id="delete" onClick={Delete}>Delete</button>
       <section id="top">
         <img id="poster" alt="poster for anime" />

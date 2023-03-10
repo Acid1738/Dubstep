@@ -1,11 +1,5 @@
 
-document.getElementById("episode").innerText = localStorage.getItem("NumberOfEpisodesWatched");
-document.getElementById("season").innerText = localStorage.getItem("CompletedSeasons");
-document.getElementById("anime").innerText = localStorage.getItem("CompletedAnime");
-document.getElementById("timespan").innerText = localStorage.getItem("TimeStamp");
 
-setTimeout(Stats, 100);
-function Stats() {
   //varaibles
   let spine;
   let SEASON;
@@ -121,4 +115,9 @@ function Stats() {
     minute +
     " minutes and " ;
    localStorage.setItem("TimeStamp", timestamp);
-}
+
+
+document.getElementById("episode").innerText = localStorage.getItem("NumberOfEpisodesWatched");
+document.getElementById("season").innerText = localStorage.getItem("CompletedSeasons");
+document.getElementById("anime").innerText = localStorage.getItem("CompletedAnime");
+document.getElementById("timespan").innerText = localStorage.getItem("TimeStamp");
