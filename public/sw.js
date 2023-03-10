@@ -4,21 +4,11 @@ const assets = [
   "/",
   "index.html",
   "/sw.js",
-  "/static/css/main.f28ba2b1.css",
-  "/static/css/main.f28ba2b1.css.map",
-  "/static/js/main.6aa69e32.js",
-  "/static/js/main.6aa69e32.js.LICENSE.txt",
-  "/static/js/main.6aa69e32.js.map",
-  "Icon/72.svg",
-  "Icon/96.svg",
-  "Icon/128.svg",
-  "Icon/144.svg",
-  "Icon/152.svg",
-  "Icon/384.svg",
-  "Icon/512.svg",
   "/Stats/stat.html",
   "/Stats/stats.js",
-  "/Stats/style.css"
+  "/Stats/style.css",
+  "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js",
+  "https://fonts.googleapis.com/css?family=Shantell Sans"
 ];
 
 self.addEventListener("install", (evt) => {
