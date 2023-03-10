@@ -6,9 +6,7 @@ const assets = [
   "/sw.js",
   "/Stats/stat.html",
   "/Stats/stats.js",
-  "/Stats/style.css",
-  "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js",
-  "https://fonts.googleapis.com/css?family=Shantell Sans"
+  "/Stats/style.css"
 ];
 
 self.addEventListener("install", (evt) => {

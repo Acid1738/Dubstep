@@ -110,7 +110,6 @@ function Stats() {
   let Remhour = Remday % 3600;
 
   let minute = Math.floor(Remhour / 60);
-  let Remminute = Remhour % 60;
 
   let timestamp =
     month +
@@ -120,8 +119,6 @@ function Stats() {
     hour +
     " hours  " +
     minute +
-    " minutes and " +
-    Remminute +
-    " seconds";
+    " minutes and " ;
    localStorage.setItem("TimeStamp", timestamp);
 }
