@@ -4,7 +4,7 @@ document.getElementById("season").innerText = localStorage.getItem("CompletedSea
 document.getElementById("anime").innerText = localStorage.getItem("CompletedAnime");
 document.getElementById("timespan").innerText = localStorage.getItem("TimeStamp");
 
-
+setTimeout(Stats, 100);
 function Stats() {
   //varaibles
   let spine;
