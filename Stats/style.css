@@ -1,0 +1,24 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Shantell Sans';font-size: 22px;
+}
+
+
+#text {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+h1 {
+    text-align: center;
+}
+
+#canva {
+    border: 2px solid rgb(51, 7, 163);
+    border-radius: 20px;
+    background-color: rgb(249, 242, 232);
+     margin-left: 3%;
+    margin-right: 3%; 
+    max-width: 600px;
+}

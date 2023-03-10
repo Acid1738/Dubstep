@@ -9,8 +9,16 @@ const assets = [
   "/static/js/main.6aa69e32.js",
   "/static/js/main.6aa69e32.js.LICENSE.txt",
   "/static/js/main.6aa69e32.js.map",
-  "/512.png",
-  "/192.png",
+  "Icon/72.svg",
+  "Icon/96.svg",
+  "Icon/128.svg",
+  "Icon/144.svg",
+  "Icon/152.svg",
+  "Icon/384.svg",
+  "Icon/512.svg",
+  "/Stats/stat.html",
+  "/Stats/stats.js",
+  "/Stats/style.css"
 ];
 
 self.addEventListener("install", (evt) => {
@@ -47,4 +55,3 @@ self.addEventListener("fetch", (evt) => {
     })
   );
 });
-

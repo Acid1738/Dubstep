@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="manifest" href="/manifest.json">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="stats.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Shantell Sans' rel='stylesheet'>
+    <title>AniList Stats</title>
+  </head>
+  <body>
+      <h1>Statistica</h1>
+  <div id="canva"><canvas id="myChart" ></canvas></div>
+    
+
+    <script>
+      let epi = localStorage.getItem("EpisodeCompletion");
+      let sea = localStorage.getItem("SeasonCompletion");
+      let ani = localStorage.getItem("AnimeCompletion");
+
+      const groupedChartOptions = {
+        type: "bar",
+        data: {
+          labels: ["Episodes", "Seasons", "Anime"],
+          datasets: [
+            {
+              data: [ani, sea, epi],
+              borderColor: [
+          'rgba(47, 92 ,181, 1)',
+          'rgba(51, 7, 163, 1)',
+          'rgba(155, 7 , 163, 1)'
+            ],
+            backgroundColor: [
+          'rgba(47, 92 ,181, 0.2)',
+          'rgba(51, 7, 163, 0.2)',
+          'rgba(155, 7 , 163 , 0.2)'
+        ],
+         borderWidth: 1,
+              stack: "Stack 0",
+              width: 10,
+              
+            },
+          ],
+        },
+        options: {
+          legend: { display: false },
+          scales: {
+            scaleShowValues: true,
+            xAxes: [{
+              barPercentage: 0.7,
+              
+            }],
+            yAxes: [
+              {
+                scaleLabel: {
+                  display: true,
+                  labelString: "Completion in %",
+                },
+              },
+            ],
+          },
+          title: {
+            display: true,
+            text: "Stats",
+          },
+        },
+      };
+
+
+      new Chart("myChart", groupedChartOptions);
+    </script>
+
+
+    <div id="text">
+      <p>You have watched <span id="episode"></span> episodes</p>
+      <p>You have watched <span id="season"></span> seasons</p>
+      <p>You have completed <span id="anime"></span> anime</p>
+      <p>You watched <span id="timespan"></span> of anime</p>
+    </div>
+
+   
+  </body>
+</html>
