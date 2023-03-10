@@ -13,6 +13,8 @@
   </head>
 
   <body>
+    <button id="stat" style="float: right;">STATISTICA</button> <br> 
+
     <div id="identify" hidden>1</div>
     <div id="progress-loader">
       <div id="progress"></div>
@@ -59,9 +61,13 @@
         navigator.serviceWorker
           .register("./sw.js")
           .then((reg) => console.log("registered", reg))
-          .catch((err) => console.log("something went wrong", err));
+          .catch((err) => console.log( err));
       }
-      console.log("cheese");
+      document.getElementById("stat").addEventListener("click", () => {
+            console.log("stat");
+            window.location.href = "https://acid1738.github.io/Dubstep/Stats/stat.html";
+          });
+    </script>
     </script>
   </body>
 </html>

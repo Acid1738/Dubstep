@@ -131,7 +131,7 @@ function SeasonFill() {
       let current = "ID" + ID + "S" + l + "CE";
       CENum[j].innerText = localStorage.getItem(current);
 
-      //last watched episode
+      //total episode
       let latest = "ID" + ID + "S" + l + "LE";
       LENum[j].innerText = localStorage.getItem(latest);
 

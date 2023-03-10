@@ -74,4 +74,6 @@ document.getElementById("menu").addEventListener("click" , () => {
 
 //fixx character not being fetched
 document.getElementById("Fix").addEventListener("click", Fix);
+
+
 export { stem, char, seao, TITLE, inform };

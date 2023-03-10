@@ -270,3 +270,7 @@
     text-align: center;
   }
 }
+
+#stat {
+  float: right;
+}
