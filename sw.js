@@ -1,20 +1,19 @@
 const staticCacheName = "site-static";
 const dynamicCache = "site-dynamic";
 const assets = [
-  "/",
-  "index.html",
-  "/sw.js",
-  "/Stats/stat.html",
-  "/Stats/stats.js",
-  "/Stats/style.css"
+  "/Dubstep/",
+  "/Dubstep/index.html",
+  "/Dubstep/sw.js",
+  "/Dubstep/Stats/stat.html",
+  "/Dubstep/Stats/stats.js",
+  "/Dubstep/Stats/style.css"
 ];
 
-self.addEventListener("install", (evt) => {
+
   caches.open(staticCacheName).then((cache) => {
     console.log("caching assets");
     cache.addAll(assets);
-  });
-});
+  })
 
 //activate
 self.addEventListener("activate", (evt) => {
