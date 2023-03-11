@@ -63,7 +63,7 @@ document.getElementById("menu").addEventListener("click" , () => {
  count += 1;
  if (count === 1) {
   document.getElementById("ytea").style.display = "block";
-  document.getElementById("clout").style.display = "none";
+  document.getElementById("clout").style.display = "none"; 
  }
 
  if (count === 2 ) {

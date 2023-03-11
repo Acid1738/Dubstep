@@ -13,6 +13,8 @@ function Click() {
       document.getElementById("root").style.display = "none";
       document.getElementById("identify").innerText = i;
       document.getElementById("stem").style.display = "block";
+      document.getElementById("clout").style.display = "none";
+      document.getElementById("topup").style.display = "none";
 
       SeasonFill();
     };

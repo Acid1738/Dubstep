@@ -31,6 +31,8 @@ function GoBack() {
   let xheese = window.screen.width;
   document.getElementById("stem").style.display = "none";
   document.getElementById("three").style.display = "none";
+  document.getElementById("clout").style.display = "block";
+  document.getElementById("topup").style.display = "block";
   if (xheese < 600 ) {
     document.getElementById("root").style.display = "block";
   } else {
