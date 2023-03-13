@@ -12,10 +12,9 @@ import Fix from "./Information/Refresh/Refresh";
 
 //check weather user is visitng for the first time
 //if yes create the storage values
-let check = JSON.parse(localStorage.getItem("Spine"));
+let check = JSON.parse(localStorage.getItem("Information"));
 if (check === null) {
-
-  localStorage.setItem("Spine", "[]");
+/*   localStorage.setItem("Spine", "[]"); */
   localStorage.setItem("Information", "[]");
   localStorage.setItem("Characters", "[]");
 }
@@ -29,18 +28,22 @@ bro.addEventListener("keypress", function (event) {
   }
 });
 
-//this adds the information to each of the anime cards
-let Spine = JSON.parse(localStorage.getItem("Spine"));
-let SpineLength = Spine.length;
-setTimeout(CardBack, 600);
-
 const stem = ReactDOM.createRoot(document.getElementById("stem"));
 const char = ReactDOM.createRoot(document.getElementById("Characters"));
 const seao = ReactDOM.createRoot(document.getElementById("Season"));
 const inform = ReactDOM.createRoot(document.getElementById("Inform"));
 
+//this adds the information to each of the anime cards
+let Information = JSON.parse(localStorage.getItem("Information"));
+let InformationLength = Information.length;
+
+//makes all the cards
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<>{Array(SpineLength).fill(<Card />)}</>);
+root.render(<>{Array(InformationLength).fill(<Card />)}</>);
+
+
+setTimeout(CardBack, 600);
+
 
 setTimeout(Click, 1000);
 
@@ -76,6 +79,9 @@ document.getElementById("menu").addEventListener("click" , () => {
 
 //fixx character not being fetched
 document.getElementById("Fix").addEventListener("click", Fix);
+
+///CLEAR CACHE
+ //if we are online clear it 
 
 
 export { stem, char, seao, TITLE, inform };

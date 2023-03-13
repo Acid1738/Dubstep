@@ -6,14 +6,17 @@ const assets = [
   "/Dubstep/sw.js",
   "/Dubstep/Stats/stat.html",
   "/Dubstep/Stats/stats.js",
-  "/Dubstep/Stats/style.css"
+  "/Dubstep/Stats/style.css",
 ];
 
-
-  caches.open(staticCacheName).then((cache) => {
-    console.log("caching assets");
-    cache.addAll(assets);
-  })
+self.addEventListener("install", (event) => {
+  waitUntil(
+    caches.open(staticCacheName).then((cache) => {
+      console.log("caching assets");
+      cache.addAll(assets);
+    })
+  );
+});
 
 //activate
 self.addEventListener("activate", (evt) => {
@@ -32,13 +35,16 @@ self.addEventListener("activate", (evt) => {
 //fetch events
 self.addEventListener("fetch", (evt) => {
   evt.respondWith(
-    caches.match(evt.request).then(cacheRes => {
-      return cacheRes || fetch(evt.request).then(fetchRes => {
-          return caches.open(dynamicCache).then(cache => {
+    caches.match(evt.request).then((cacheRes) => {
+      return (
+        cacheRes ||
+        fetch(evt.request).then((fetchRes) => {
+          return caches.open(dynamicCache).then((cache) => {
             cache.put(evt.request.url, fetchRes.clone());
             return fetchRes;
+          });
         })
-    });
+      );
     })
   );
 });

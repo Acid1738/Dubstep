@@ -147,14 +147,15 @@ input::-webkit-inner-spin-button {
   }
 
   #SeasonControl {
-    display: none;
+    display: block;
     position: fixed;
-    bottom: 10%;
+    bottom: 15%;
+    margin-left: 5vw;
     color: white;
-    margin-left: 60px;
-    width: max-content;
+    width: 80vw;
     border-radius: 10px;
     background: #181818;
+    padding: 3%;
     
   }
 

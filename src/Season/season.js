@@ -96,9 +96,6 @@ function SeasonFill() {
 
   //how many characters to print
   let Characters = JSON.parse(localStorage.getItem("Characters"));
-  if (Characters === "" ) {
-     Fix()
-  }
   let Char = Characters[position];
   let lenth = Char.length;
 

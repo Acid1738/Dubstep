@@ -1,7 +1,6 @@
 
-
-  //varaibles
-  let spine;
+    //varaibles
+  let Information;
   let SEASON;
   let season;
   let WATCH;
@@ -15,16 +14,16 @@
   let information;
   let time;
   let duration;
-  let AnimeTime;
+  let WatchTime = 0;
   let TotalTime;
   let seasonL = 0;
   let CompletedAnime = 0;
-  let spineL;
+  let InformationL;
 
   //get all anime
-  spine = JSON.parse(localStorage.getItem("Spine"));
-  spineL = spine.length;
-  for (let i = 0; i < spine.length; i++) {
+  Information = JSON.parse(localStorage.getItem("Information"));
+  InformationL = Information.length;
+  for (let i = 0; i < Information.length; i++) {
     //episode legth
     information = JSON.parse(localStorage.getItem("Information"));
     duration = information[i].info.duration;
@@ -32,7 +31,7 @@
     time = duration.slice(0, 2);
 
     //SEASON
-    SEASON = "Season" + spine[i];
+    SEASON = "Season" + Information[i].info.id;
     season = JSON.parse(localStorage.getItem(SEASON));
     seasonL = season.length;
    
@@ -44,14 +43,15 @@
       //get number of season
 
       //episode curruntly on
-      WATCH = "ID" + spine[i] + "S" + l + "CE";
+      WATCH = "ID" + Information[i].info.id + "S" + l + "CE";
       watch = localStorage.getItem(WATCH);
 
       WatchedEpisodes += Number(watch);
-      WatchTime = watch * Number(time);
-
+    
+      WatchTime += watch * Number(time);
+    
       //totL EPISODE IN SEASON
-      TOTAL = "ID" + spine[i] + "S" + l + "LE";
+      TOTAL = "ID" + Information[i].info.id + "S" + l + "LE";
       total = localStorage.getItem(TOTAL);
 
       TotalEpisodes += Number(total);
@@ -85,9 +85,9 @@
 
   //how many anime have been completed
   localStorage.setItem("CompletedAnime", CompletedAnime);
-  let AnimeCompletion = ((CompletedAnime / spineL) * 100).toFixed(2);
+  let AnimeCompletion = ((CompletedAnime / InformationL) * 100).toFixed(2);
   localStorage.setItem("AnimeCompletion" , AnimeCompletion);
-  localStorage.setItem("NumberOfAnime", spineL);
+  localStorage.setItem("NumberOfAnime", InformationL);
 
   
   localStorage.setItem("TotalTimeWatched", WatchTime);
@@ -113,11 +113,12 @@
     hour +
     " hours  " +
     minute +
-    " minutes and " ;
+    " minutes" ;
    localStorage.setItem("TimeStamp", timestamp);
-
 
 document.getElementById("episode").innerText = localStorage.getItem("NumberOfEpisodesWatched");
 document.getElementById("season").innerText = localStorage.getItem("CompletedSeasons");
 document.getElementById("anime").innerText = localStorage.getItem("CompletedAnime");
 document.getElementById("timespan").innerText = localStorage.getItem("TimeStamp");
+
+    

@@ -45,10 +45,6 @@ function AddNew() {
     localStorage.setItem("Information", JSON.stringify(Information));
   }
 
-  let Spine = JSON.parse(localStorage.getItem("Spine"));
-  Spine.unshift(ID);
-  localStorage.setItem("Spine", JSON.stringify(Spine));
-
   let CharLink = link + "/characters";
 
   //Character
@@ -67,6 +63,7 @@ function AddNew() {
         let info = {};
         info.name = CharData.data[i].character.name;
         info.image = CharData.data[i].character.images.jpg.image_url;
+
         FilteredCharData.push(info);
         console.log(FilteredCharData);
       }

@@ -15,15 +15,12 @@ function Delete() {
   let position = document.getElementById("identify").innerText;
   let Information = JSON.parse(localStorage.getItem("Information"));
   let Characters = JSON.parse(localStorage.getItem("Characters"));
-  let Spine = JSON.parse(localStorage.getItem("Spine"));
 
   Information.splice(position, 1);
   Characters.splice(position, 1);
-  Spine.splice(position, 1);
 
   localStorage.setItem("Information", JSON.stringify(Information));
   localStorage.setItem("Characters", JSON.stringify(Characters));
-  localStorage.setItem("Spine", JSON.stringify(Spine));
   window.location.reload();
 }
 
@@ -31,8 +28,11 @@ function GoBack() {
   let xheese = window.screen.width;
   document.getElementById("stem").style.display = "none";
   document.getElementById("three").style.display = "none";
+  document.getElementById("ytea").style.display = "none";
   document.getElementById("clout").style.display = "block";
   document.getElementById("topup").style.display = "block";
+  document.getElementById("Fix").style.display = "none";
+  
   if (xheese < 600 ) {
     document.getElementById("root").style.display = "block";
   } else {

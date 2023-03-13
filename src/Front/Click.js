@@ -15,6 +15,8 @@ function Click() {
       document.getElementById("stem").style.display = "block";
       document.getElementById("clout").style.display = "none";
       document.getElementById("topup").style.display = "none";
+      document.getElementById("ytea").style.display = "none";
+      document.getElementById("Fix").style.display = "block";
 
       SeasonFill();
     };

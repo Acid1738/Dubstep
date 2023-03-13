@@ -37,7 +37,7 @@ function Back() {
         <input id="lastep" type="number" placeholder="Number of Episodes In Season"></input>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button onClick={LastEP}>Save</button> 
-        <br/>
+        <br/> <br/>
         <input id="currep" type="number" placeholder="Last Watched Episode"></input>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button onClick={TotalEP}>Save</button>

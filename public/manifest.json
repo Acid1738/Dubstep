@@ -4,49 +4,49 @@
   "icons": [
 
     {
-      "src": "/Dubstep/Icon/72.svg",
+      "src": "/Dubstep/Icon/72.png",
       "sizes": "72x72",
       "type": "image/png"
     },
 
     {
-      "src": "/Dubstep/Icon/96.svg",
+      "src": "/Dubstep/Icon/96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
 
     {
-      "src": "/Dubstep/Icon/128.svg",
+      "src": "/Dubstep/Icon/128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
 
     {
-      "src": "/Dubstep/Icon/144.svg",
+      "src": "/Dubstep/Icon/144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
 
     {
-      "src": "/Dubstep/Icon/152.svg",
+      "src": "/Dubstep/Icon/152.png",
       "sizes": "152x152",
       "type": "image/png"
     },
 
     {
-      "src": "/Dubstep/Icon/192.svg",
+      "src": "/Dubstep/Icon/192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
 
     {
-      "src": "/Dubstep/Icon/384.svg",
+      "src": "/Dubstep/Icon/384.png",
       "sizes": "384x384",
       "type": "image/png"
     },
 
     {
-      "src": "/Dubstep/Icon/512.svg",
+      "src": "/Dubstep/Icon/512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
