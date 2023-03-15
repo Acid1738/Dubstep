@@ -66,12 +66,14 @@ document.getElementById("menu").addEventListener("click" , () => {
  count += 1;
  if (count === 1) {
   document.getElementById("ytea").style.display = "block";
-  document.getElementById("clout").style.display = "none"; 
+  document.getElementById("clout").style.display = "none";
+  document.getElementById("menu").innerText = "SEARCH";
  }
 
  if (count === 2 ) {
   document.getElementById("ytea").style.display = "none";
-  document.getElementById("clout").style.display = "block";  
+  document.getElementById("clout").style.display = "block"; 
+  document.getElementById("menu").innerText = "ADD ANIME";
   count = 0 ;
  }
 

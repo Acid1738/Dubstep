@@ -105,20 +105,43 @@
 
   let minute = Math.floor(Remhour / 60);
 
-  let timestamp =
-    month +
-    " months  " +
-    day +
-    " days  " +
-    hour +
-    " hours  " +
-    minute +
-    " minutes" ;
+  let timestamp;
+
+  //month
+  if (month === 1 ) {
+    timestamp += " 1 month ";
+  }
+
+  if (month > 1) {
+    timestamp += month + " months ";
+  }
+
+  //day
+  if (day === 1 ) {
+    timestamp += " 1 day and ";
+  }
+
+  if (day > 1) {
+    timestamp += day + " days and ";
+  }
+
+  //minutes
+  if (minute === 1 ) {
+    timestamp += " 1 minute ";
+  }
+
+  if (minute > 1) {
+    timestamp += minute + " minutes ";
+  }
+
+
    localStorage.setItem("TimeStamp", timestamp);
 
 document.getElementById("episode").innerText = localStorage.getItem("NumberOfEpisodesWatched");
 document.getElementById("season").innerText = localStorage.getItem("CompletedSeasons");
 document.getElementById("anime").innerText = localStorage.getItem("CompletedAnime");
 document.getElementById("timespan").innerText = localStorage.getItem("TimeStamp");
+document.getElementById("total").innerText = localStorage.getItem("NumberOfAnime");
+
 
     

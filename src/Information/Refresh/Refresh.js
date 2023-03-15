@@ -1,3 +1,5 @@
+import { SeasonFill } from "../../Season/season";
+
 //function that calls the characters for that season beacuse it didnt get called the first time (maybe)
 function Fix() {
   let position = document.getElementById("identify").innerText;
@@ -12,10 +14,13 @@ function Fix() {
 
   function SaveChar(CharacterData) {
     let CharData = CharacterData;
-
+    let lenth = CharData.data;
+    let b = 12
     let FilteredCharData = [];
-
-    for (let i = 0; i < 10; i++) {
+    if ( lenth.length < 12 ) {
+      b = lenth.length;
+    }
+    for (let i = 0; i < b ; i++) {
       if (CharData.data[i].role === "Main") {
         let info = {};
         info.name = CharData.data[i].character.name;
@@ -29,6 +34,8 @@ function Fix() {
 
     localStorage.setItem("Characters", JSON.stringify(Characters));
   }
+
+  SeasonFill()
 }
 
 export default Fix;

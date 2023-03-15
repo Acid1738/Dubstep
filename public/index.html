@@ -13,15 +13,15 @@
   </head>
 
   <body>
-     <!-- top level button -->
+    <!-- top level button -->
     <div id="topup">
-      <button id="menu">⮀</button>
-      <button id="stat" >S</button>
+      <button id="menu">ADD ANIME</button>
+      <button id="stat">STATS</button>
     </div>
 
     <!-- hidden -->
     <div id="identify" hidden>1</div>
-    
+
     <!-- search button -->
     <div id="clout">
       <input id="searchInput" type="text" placeholder="search..." />
@@ -50,7 +50,7 @@
     <!-- Html for the react to render elements -->
     <div id="stem">
       <div id="Inform"></div>
-      <button id="Fix" style="display: none;">FIX</button>
+      <button id="Fix" style="display: none">FIX</button>
       <div id="Characters"></div>
       <button id="three">⋮</button>
       <div id="Season"></div>
@@ -58,18 +58,32 @@
 
     <div id="root"></div>
 
+    <!--  clear cache if online -->
+ <!--    <script>
+       if (navigator.onLine) {
+        if (sessionStorage.getItem("FirstTime") === null) {
+          caches.delete("site-dynamic");
+          sessionStorage.setItem("FirstTime", "true");
+        } else {
+          sessionStorage.setItem("FirstTime", "second");
+        }
+      } 
+    </script> -->
+
+
+    <!-- activate service worker -->
     <script>
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker
           .register("./sw.js")
           .then((reg) => console.log("registered", reg))
-          .catch((err) => console.log( err));
+          .catch((err) => console.log(err));
       }
       document.getElementById("stat").addEventListener("click", () => {
-            console.log("stat");
-            window.location.href = "Dubstep/Stats/stat.html";
-          });
+        console.log("stat");
+        window.location.href = "/Dubstep/Stats/stat.html";
+      });
     </script>
-    </script>
+    
   </body>
 </html>

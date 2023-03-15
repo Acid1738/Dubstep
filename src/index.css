@@ -165,7 +165,7 @@
   body {
     background-color: #212121;
     margin: 0;
-    color: white;
+   
     -webkit-font-smoothing: antialiased;
   }
 
@@ -219,6 +219,7 @@
     padding-left: 3%;
     padding-right: 3%;
     font-size: small;
+    padding-top: 4%;
   }
 
   button {
