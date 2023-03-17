@@ -34,13 +34,13 @@ function Back() {
         <button onClick={AddSeason}>+ Season</button>
         <button id="Remove" onClick={RemoveSeason}>- season</button>
          <br/> <br/>
+         <input id="currep" type="number" placeholder="Last Watched Episode"></input>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button onClick={TotalEP}>Save</button>
+        <br/> <br/>
         <input id="lastep" type="number" placeholder="Number of Episodes In Season"></input>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button onClick={LastEP}>Save</button> 
-        <br/> <br/>
-        <input id="currep" type="number" placeholder="Last Watched Episode"></input>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button onClick={TotalEP}>Save</button>
         <br/> <br/>
         <button id="close" onClick={HideControl}>Close</button>
       </div>

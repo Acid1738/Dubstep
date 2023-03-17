@@ -34,7 +34,7 @@ function Fix() {
 
     localStorage.setItem("Characters", JSON.stringify(Characters));
   }
-
+  document.getElementById("Fix").style.display = "none";
   SeasonFill()
 }
 

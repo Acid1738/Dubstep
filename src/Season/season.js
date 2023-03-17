@@ -4,7 +4,6 @@ import { Back } from "../Information/Info";
 import { InfoBack } from "../Information/InfoBack";
 import "./character.css";
 import "./season.css";
-import Fix from "../Information/Refresh/Refresh";
 
 //Adds a new season in an anime
 function AddSeason() {
@@ -14,8 +13,13 @@ function AddSeason() {
   let season = "Season" + ID;
   let SeasonA = JSON.parse(localStorage.getItem(season));
   SeasonA.push("1");
+  
   localStorage.setItem(season, JSON.stringify(SeasonA));
   SeasonFill();
+  setTimeout(() => {
+    window.scrollTo(0, 90000);
+  }, 300);
+
 }
 
 //Removes the last season in an anime
@@ -28,6 +32,7 @@ function RemoveSeason() {
   SeasonA.pop();
   localStorage.setItem(season, JSON.stringify(SeasonA));
   SeasonFill();
+  window.scrollTo(0, 9000);
 }
 
 //the html for the characters

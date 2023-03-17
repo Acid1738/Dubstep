@@ -12,12 +12,11 @@ function Click() {
       document.getElementById("three").style.display = "block";
       document.getElementById("root").style.display = "none";
       document.getElementById("identify").innerText = i;
-      document.getElementById("stem").style.display = "block";
       document.getElementById("clout").style.display = "none";
       document.getElementById("topup").style.display = "none";
       document.getElementById("ytea").style.display = "none";
-      document.getElementById("Fix").style.display = "block";
-
+      document.getElementById("lds-ellipsis").style.display = "inline-block";
+     
       SeasonFill();
     };
   }

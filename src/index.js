@@ -82,8 +82,11 @@ document.getElementById("menu").addEventListener("click" , () => {
 //fixx character not being fetched
 document.getElementById("Fix").addEventListener("click", Fix);
 
-///CLEAR CACHE
- //if we are online clear it 
+//charcters were not fetched
+  let Characters = JSON.parse(localStorage.getItem("Characters"));
+  if (Information.length !== Characters.length){
+   alert("The Last Anime You Added Did Not Have Characters. Go To The Anime And Press The 'FIX' Button ");
+  }
 
 
 export { stem, char, seao, TITLE, inform };
