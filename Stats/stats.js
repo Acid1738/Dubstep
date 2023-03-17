@@ -105,7 +105,7 @@
 
   let minute = Math.floor(Remhour / 60);
 
-  let timestamp;
+  let timestamp = "" ;
 
   //month
   if (month === 1 ) {
@@ -118,20 +118,29 @@
 
   //day
   if (day === 1 ) {
-    timestamp += " 1 day and ";
+    timestamp += " 1 day ";
   }
 
   if (day > 1) {
-    timestamp += day + " days and ";
+    timestamp += day + " days ";
+  }
+
+  //hours 
+  if (hour === 1 ) {
+    timestamp += " 1 hour ";
+  }
+
+  if (hour > 1) {
+    timestamp +=  hour + " hours ";
   }
 
   //minutes
   if (minute === 1 ) {
-    timestamp += " 1 minute ";
+    timestamp += " and 1 minute ";
   }
 
   if (minute > 1) {
-    timestamp += minute + " minutes ";
+    timestamp += " and " + minute + " minutes ";
   }
 
 
